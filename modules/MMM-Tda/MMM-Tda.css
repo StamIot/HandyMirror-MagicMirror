@@ -1,0 +1,40 @@
+/* Style du wrapper du minuteur */
+.timer-wrapper {
+  background-color: #d2896c; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  padding: 10px; /* Espacement intérieur */
+  border-radius: 10px; /* Coins arrondis */
+  text-align: center; /* Alignement du texte */
+  font-size: 1.5em; /* Taille de la police */
+  margin-top: 20px; /* Espacement par rapport à la liste de tâches */
+}
+
+/* Style de l'animation du minuteur */
+.timer-wrapper::before {
+  content: ""; /* Ajout d'un pseudo-élément */
+  position: absolute; /* Positionnement absolu */
+  top: 0; /* Position en haut */
+  left: 0; /* Position à gauche */
+  width: 100%; /* Largeur de la zone de l'élément parent */
+  height: 100%; /* Hauteur de la zone de l'élément parent */
+  border-radius: 10px; /* Coins arrondis */
+  background-color: #fff; /* Couleur de fond */
+  z-index: -1; /* Positionnement en arrière-plan */
+  animation: pulse 2s ease-in-out infinite; /* Animation */
+}
+
+/* Définition de l'animation */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95); /* Taille initiale */
+    opacity: 1; /* Opacité initiale */
+  }
+  50% {
+    transform: scale(1.05); /* Taille maximale */
+    opacity: 0.5; /* Opacité réduite */
+  }
+  100% {
+    transform: scale(0.95); /* Taille finale */
+    opacity: 1; /* Opacité finale */
+  }
+}

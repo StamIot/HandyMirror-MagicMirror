@@ -246,3 +246,8 @@ sup {
   border-spacing: 0;
   border-collapse: separate;
 }
+
+.MMM-MedicationReminder .normal,
+.MMM-MedicationReminder .small.dimmed {
+  display: none;
+}
