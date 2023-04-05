@@ -114,6 +114,18 @@ let config = {
 		config: {
 			header : false,
 		  }
+		},
+		{
+			module: "MMM-cryptocurrency",
+			position: "top_right",
+			config: {
+				apikey: 'bdf1ec47-30c4-4de8-832f-4a36297ae85a',
+				currency: ['bitcoin', 'ethereum', 'solana', 'xrp', 'litecoin'],
+				conversion: 'EUR',
+				headers: ['change24h', 'change1h', 'change7d'],
+				displayType: 'logoWithChanges',
+				showGraphs: true
+			}
 		}
 	]
 };
