@@ -1,40 +1,43 @@
-/* Style du wrapper du minuteur */
+/* Nouveau style pour le wrapper du minuteur */
 .timer-wrapper {
-  background-color: #d2896c; /* Couleur de fond */
-  color: #fff; /* Couleur du texte */
-  padding: 10px; /* Espacement intérieur */
-  border-radius: 10px; /* Coins arrondis */
-  text-align: center; /* Alignement du texte */
-  font-size: 1.5em; /* Taille de la police */
-  margin-top: 20px; /* Espacement par rapport à la liste de tâches */
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
 }
 
-/* Style de l'animation du minuteur */
-.timer-wrapper::before {
-  content: ""; /* Ajout d'un pseudo-élément */
-  position: absolute; /* Positionnement absolu */
-  top: 0; /* Position en haut */
-  left: 0; /* Position à gauche */
-  width: 100%; /* Largeur de la zone de l'élément parent */
-  height: 100%; /* Hauteur de la zone de l'élément parent */
-  border-radius: 10px; /* Coins arrondis */
-  background-color: #fff; /* Couleur de fond */
-  z-index: -1; /* Positionnement en arrière-plan */
-  animation: pulse 2s ease-in-out infinite; /* Animation */
+/* Style du cercle du minuteur */
+.timer-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 10px solid #db4325;
+  border-top-color: #fff;
+  transform: rotate(-90deg);
+  animation: countdown 1s linear infinite;
 }
 
-/* Définition de l'animation */
-@keyframes pulse {
+/* Animation pour le cercle du minuteur */
+@keyframes countdown {
   0% {
-    transform: scale(0.95); /* Taille initiale */
-    opacity: 1; /* Opacité initiale */
-  }
-  50% {
-    transform: scale(1.05); /* Taille maximale */
-    opacity: 0.5; /* Opacité réduite */
+    transform: rotate(-90deg);
   }
   100% {
-    transform: scale(0.95); /* Taille finale */
-    opacity: 1; /* Opacité finale */
+    transform: rotate(270deg);
   }
+}
+
+/* Style du texte affichant le temps restant */
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
 }

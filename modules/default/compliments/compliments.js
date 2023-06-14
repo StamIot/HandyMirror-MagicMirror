@@ -8,11 +8,11 @@ Module.register("compliments", {
 	// Module config defaults.
 	defaults: {
 		compliments: {
-			anytime: ["Hey there sexy!"],
-			morning: ["Good morning, handsome!", "Enjoy your day!", "How was your sleep?"],
-			afternoon: ["Hello, beauty!", "You look sexy!", "Looking good today!"],
-			evening: ["Wow, you look hot!", "You look nice!", "Hi, sexy!"],
-			"....-01-01": ["Happy new year!"]
+			anytime: ["Coucou toi!"],
+			morning: ["Bon matin !", "Profite de ta journée!", "Bien dormis ?"],
+			afternoon: ["Tu as mangé ?", "T'es trop trop joli", "Tu vas réussir!"],
+			evening: ["Bonne soirée!", "Coucou sexy girl!", "Hello toi !"],
+			"....-01-01": ["Bonne année !"]
 		},
 		updateInterval: 30000,
 		remoteFile: null,
