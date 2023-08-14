@@ -68,12 +68,12 @@ let config = {
 		},
 		{ module: "MMM-OpenmapWeather",
 		  position: "top_right",
-		  config: { 
+		  config: {
 			location: "Charbonnière-les-bains,FR",
 			           locationID: "3026700",
 						appid: "c0526873bd2aaf4e98ead041cf09c76c",
-						colorIcon: true                     
-					}        
+						colorIcon: true
+					}
 		},
 		{
 			module: "newsfeed",
@@ -116,17 +116,13 @@ let config = {
 		  }
 		},
 		{
-			module: "MMM-cryptocurrency",
+			module: "MMM-Face-Recognition-SMAI",
 			position: "top_right",
 			config: {
-				apikey: 'bdf1ec47-30c4-4de8-832f-4a36297ae85a',
-				currency: ['bitcoin', 'ethereum', 'solana', 'xrp', 'litecoin'],
-				conversion: 'EUR',
-				headers: ['change24h', 'change1h', 'change7d'],
-				displayType: 'logoWithChanges',
-				showGraphs: true
+			  //prompt: "Put in your own text"
 			}
-		}
+		},
+
 	]
 };
 
